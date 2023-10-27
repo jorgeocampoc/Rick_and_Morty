@@ -1,29 +1,34 @@
+import { UseCounter } from "../hooks/Counter";
+import { UseFetchCharacters } from "../hooks/UseFetchCharacters";
 
-export const Pagination = () => {
+
+ export  const  Pagination =  () => {
+          const {counter, dec, inc} = UseCounter(); 
+          const { characters, isLoading } = UseFetchCharacters(counter);
+
   return (
-    <div className="titulo">
-      <nav >
-        <ul class="pagination justify-content-center">
-          <button type="button" className="btn btn-primary" >
+    <div className="titulo ">
+      
+      <nav>
+        <ul className="pagination justify-content-center grid gap-3">
+          <button type="button" className="btn btn-dark border border-success " onClick={()=>dec()}  disabled={isLoading}>
               Anterior
             </button>
-          <li class="page-item">
-            <a class="page-link" href="#">
-              1
-            </a>
+          <li className="page-item ">
+            <span className="page-link text-dark rounded-circle " href="#">
+              {counter}
+            </span>
           </li>
-          <li class="page-item">
-            <a class="page-link active" href="#">
-              2
-            </a>
+          <li className="page-item p-2" >
+          <div className="container border border-dark">de</div>
           </li>
-          <li class="page-item">
-            <a class="page-link" href="#">
-              3
-            </a>
+          <li className="page-item">
+            <span className="page-link text-dark rounded-circle" href="#" >
+              42
+            </span>
           </li>
-          <li class="page-item">
-            <button type="button" className="btn btn-primary" >
+          <li className="page-item">
+            <button type="button" className="btn btn-dark border border-success" onClick={()=>inc()} disabled={isLoading} >
               
               Siguiente
             </button>

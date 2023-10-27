@@ -2,7 +2,6 @@
 
 
 export const CardCharacter = ({status,name, image, gender, origin,img}) => {
-    const rutaImagen = '../assets/alien.jpg';
   return (
     <>
     

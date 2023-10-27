@@ -1,0 +1,9 @@
+import React from "react";
+
+export const IsLoading = () => {
+  return (
+    <div className="text-center ">
+      <div className="spinner-border text-success " role="status"></div>
+    </div>
+  );
+};

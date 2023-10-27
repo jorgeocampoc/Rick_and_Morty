@@ -1,9 +1,11 @@
+export let finalIndex= '';
+export const GetDataCharacters = async ( index ) => {
 
+    
 
-export const GetDataCharacters = async () => {
-    const api = 'https://rickandmortyapi.com/api/character';
+    const api = `https://rickandmortyapi.com/api/character?page=${index}`;
     const res = await fetch(api);
-    const { results } = await res.json();
+    const { results, info } = await res.json();
     const characters = await results.map( res =>({
         id: res.id,
         name: res.name,
@@ -15,6 +17,9 @@ export const GetDataCharacters = async () => {
         img: ''
         
     }));
+    const {pages} = info;
+    finalIndex = pages;
+    
     characters.map( res => {
         if(res.species === 'Human'){
             res.img = 'https://p4.wallpaperbetter.com/wallpaper/140/900/941/rick-and-morty-adult-swim-cartoon-morty-smith-wallpaper-preview.jpg'
@@ -22,8 +27,13 @@ export const GetDataCharacters = async () => {
             res.img = "https://okdiario.com/img/2023/02/19/ovni-655x368.jpg"
         }
     })
-    console.log(characters);
+    
     return characters;
 }
+
+
+
+
+
 
 
