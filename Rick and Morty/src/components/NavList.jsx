@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export const NavList = () => {
   return (
-    <div className=" d-flex mb-3  bg-secondary border border-success rounded justify-content-between ">
+    <div className=" d-flex   bg-secondary border border-success rounded justify-content-between container mt-2">
       <nav className="navbar navbar-expand-sm navbar-dark  p-2  ">
         <div className="container-fuild ">
           <button

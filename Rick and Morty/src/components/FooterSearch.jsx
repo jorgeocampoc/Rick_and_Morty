@@ -24,8 +24,8 @@ export const FooterSearch = ({counter, dec, inc, info}) => {
 
   return (
    <>
-    <footer className="footer  fixed">
-          <nav>
+    <footer className="footer fixed  ">
+          <nav className=''>
             <ul className="pagination justify-content-center grid gap-3">
               <button
                 type="button"

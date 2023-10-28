@@ -25,11 +25,12 @@ export const ModalForm = ({ formStater}) => {
     <div className="container text-center">
       <button
         type="button"
-        className="btn btn-primary "
+        className="btn btn-primary mb-3 p-3 rounded-circle m-3 "
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
-        Buscar
+        <i className=" fa fa-search p-1 "></i> 
+
       </button>
 
       <div

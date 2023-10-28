@@ -13,7 +13,7 @@ export const UseCounter = ( initialValue = 1 ) => {
     }
     const reset = () => {
         if (finalIndex == counter) return;
-        setCounter(0);
+        setCounter(1);
     }
 
   return {

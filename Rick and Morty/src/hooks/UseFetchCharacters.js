@@ -18,7 +18,7 @@ export const UseFetchCharacters = ( index ) => {
 
   useEffect(() => {
     getCharacters();
-  }, [index]);
+  }, [ index ]);
 
   return {
     characters,

@@ -45,10 +45,9 @@ body{
   padding: 30px 20px ;
 }
 .main-text p{
-  text-transform: uppercase;
-  font-weight: 700;
   font-size: 12px;
   margin: 5px 10px 10px;
+  font-size: small;
 }
 
 
@@ -97,3 +96,14 @@ body{
     width: 30%;
   }
 }
+
+.opacity-custom{
+  background-color: rgb(191, 195, 202);
+  box-shadow: 0 0 20px rgba(10, 87, 189, 0.5)
+}
+.spacing-letter{
+  letter-spacing: 30px;
+  height: 120px;
+  font-weight: bolder;
+}
+

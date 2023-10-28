@@ -16,7 +16,7 @@ export const CharacterList = (  ) => {
         {isLoading ? (
            <IsLoading />
         ) : (
-          <div className="row">
+          <div className="row pb-3">
             {characters.map((character) => {
               return (
                 <div className="col-md-3 mb-3" key={character.id}>
